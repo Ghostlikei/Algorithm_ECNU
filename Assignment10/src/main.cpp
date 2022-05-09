@@ -98,23 +98,32 @@ public:
         
         for (int i = 0; i < times; i+=1000){
             csvStream<<i<<",";
-            int index = __rand();
-            cout<<"Testing: "<<index<<", Times:"<<i<<endl;
+            
+            cout<<"Testing: "<<i<<endl;
 
             auto startTime1 = chrono::high_resolution_clock::now();
-            for(int j = 0; j < i; j++) string str = testBST.find(index);
+            for(int j = 0; j < i; j++){
+                int index = __rand(); 
+                string str = testBST.find(index);
+            }    
             auto endTime1 = chrono::high_resolution_clock::now();
             chrono::duration<double, milli> diffTime1 = endTime1 - startTime1;
             csvStream<<fixed<<diffTime1.count()<<",";
 
             auto startTime2 = chrono::high_resolution_clock::now();
-            for(int j = 0; j < i; j++) string str = testArray.find(index);
+            for(int j = 0; j < i; j++){
+                int index = __rand(); 
+                string str = testArray.find(index);
+            }
             auto endTime2 = chrono::high_resolution_clock::now();
             chrono::duration<double, milli> diffTime2 = endTime2 - startTime2;
             csvStream<<fixed<<diffTime2.count()<<",";
 
             auto startTime3 = chrono::high_resolution_clock::now();
-            for(int j = 0; j < i; j++) string str = testArray.find(index);
+            for(int j = 0; j < i; j++){
+                int index = __rand(); 
+                string str = testTable.find(names[index]);
+            }
             auto endTime3 = chrono::high_resolution_clock::now();
             chrono::duration<double, milli> diffTime3 = endTime3 - startTime3;
             csvStream<<fixed<<diffTime3.count()<<endl;
