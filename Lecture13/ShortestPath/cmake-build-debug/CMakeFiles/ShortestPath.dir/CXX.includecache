@@ -1,0 +1,32 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+D:/temp/ShortestPath/DiEdge.h
+iostream
+-
+
+D:/temp/ShortestPath/DiGraph.h
+DiEdge.h
+D:/temp/ShortestPath/DiEdge.h
+vector
+-
+list
+-
+
+D:/temp/ShortestPath/ShortestPath.h
+DiGraph.h
+D:/temp/ShortestPath/DiGraph.h
+queue
+-
+
+D:/temp/ShortestPath/test.cpp
+ShortestPath.h
+D:/temp/ShortestPath/ShortestPath.h
+iostream
+-
+
